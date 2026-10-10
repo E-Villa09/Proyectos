@@ -18,7 +18,7 @@ while x=="1":
     time.sleep(1)
     print(A)
     if A==call:
-        print("YOU WIN!!!")
+        print("you win")
     else:
         print("YOU LOSE!!!")
     again=input("Play Again? (y/n): ")
