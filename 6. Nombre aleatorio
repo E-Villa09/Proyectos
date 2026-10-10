@@ -1,0 +1,31 @@
+import random
+import time
+x="1"
+while x=="1" or x=="2":
+
+    A=["Gabriel","María","José","Antonio","Isabel","Ángeles","David","Salvador","Laura","Remedios","Ramón","Rafael","Cristina","Rosa","Andrés","Jacinto","Beatriz","Juan","Teresa","Alba","Sergio"]
+    B=["García","Hernández","Torres","Del Monte","Villar","Román","Cruz","Fuentes","De la Vega","Blanco","Alcalá","Ferrer","Díaz","Herrero","Mendoza","Santamaría","Toledano","Soler","Echevarría","López","Miranda"]
+    C=["Márquez","Gallego","Álvarez","Muñoz","Nieto","Olivares","Roca","Del Valle","De la Barca","Jiménez","Soto","Collado","Villalba","Heredia","Domínguez","Balaguer","Ochoa","Sagunto","Benito","Silva","Gavilán"]
+
+    if x=="1":
+        a=input("¿Crear una persona? (s/n): ")
+    elif x=="2":
+        a=input("¿Crear otra persona? (s/n): ")
+    if a=="s":
+        x="2"
+        a=random.choice(list(A))
+        b=random.choice(list(B))
+        c=random.choice(list(C))
+        time.sleep(1)
+        print(a,b,c)
+        print("")
+    elif a=="n":
+        print("Fin Del Programa")
+        x="3"
+    else:
+        print("Valor Incorrecto")
+
+# 21 nombres, 21 1er apellidos, 21 2do apellidos
+# (1/21) * (1/21) * (1/21) = 1/9261
+# (1/9261) * 100 ≈ 0,0108
+# La probabilidad de que la persona sea Gabriel García Márquez es de 1/9261 o 0,0108 %
