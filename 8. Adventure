@@ -1,0 +1,99 @@
+print(" *** Adventure *** ")
+print("You're in the entrance of a dimly-lit cave")
+
+a="1"
+while a=="1":
+    A=input("- Enter? (y/n): ")
+
+    if A=="n":
+        a="2"
+        print("You decide not to enter and walk away")
+        print("THE END")
+        print("Thank You For Playing")
+
+    elif A=="y":
+        a="2"
+        print("You enter the cave")
+        print("As you walk through the vast, empty passage you hear the squeaks of bats echoing")
+        print("Some light still seeps from a crack in the cave's ceiling")
+        print("You get to a fork in the road")
+
+        b="1"
+        while b=="1":
+            B=input("- Which way should you go (left/right)?: ")
+
+            if B=="left":
+                b="2"
+                print("You decide to go left")
+                print("As you go further into the cave it stars to get darker and a certain strange smell starts to appear")
+                print("You find a lit torch hanging from the wall")
+                print("You pick it up")
+                print("Further into the cave, you find two sets of stairs, one next to the other")
+                print("one goes up, the other goes down")
+                c="1"
+                while c=="1":
+                    C=input("- Go up or down (up/down)?: ")
+                    if C=="up":
+                        c="2"
+                        print("You decide to go up")
+                        print("As you're walking up the steps, you hear a rumbling, and feel the ground is shaking")
+                        print("The last thing you see is a giant boulder, rolling down the stairs")
+                        print("You are squashed and die inmediately")
+                        print("THE END")
+                        print("Thank you for playing")
+
+                    elif C=="down":
+                        c="2"
+                        print("You decide to go down")
+                        print("As you're walking down the stairs, you hear a rumbling and feel the ground is shaking")
+                        print("You glimpse a giant one-eyed man, wearing but a cowhide loincloth")
+                        print("He's heading up the stairs and stops in his tracks, confused, once he notices you")
+                        e="1"
+                        while e=="1":
+                            E=input("- You decide to say something ('hello'/'get out of the way'): ")
+                            if E=="hello":
+                                e="2"
+                                print("He opens his mouth agape, inmediately grabs you head and crushes it between his fingers")
+                                print("('hello' happens to be one of the gravest, most offensive insults in cyclop language)")
+                                print("THE END")
+                                print("Thank You For playing")
+                            elif E=="get out of the way":
+                                e="2"
+                                print("He doesn't speak your language")
+                                print("He seems puzzled and decides to let it go")
+                                print("He walks past you and keeps heading up the stairs")
+                            else:
+                                print("Incorrect Value")
+
+
+                    else:
+                        print("Incorrect Value")
+
+            elif B =="right":
+                b="2"
+                print("You decide to go right")
+                print("As you go further into the cave it starts getting brighter")
+                print("Eventually, you come across an iron door embedded in the rock walls")
+                print("You open it, and inside you find a luscious green garden filled with palm trees, vines and other exotic plants and trees")
+                print("It smells like stew")
+                print("You explore and find a small man dressed in green, red and blue garments, sleeping on a toadstool")
+                d="1"
+                while d=="1":
+                    D=input("- Wake him up (y/n)?: ")
+                    if D=="y":
+                        d="2"
+                        print("You shake him until he awakens")
+                    elif D=="n":
+                        d="2"
+                        print("You prefer not to disturb him")
+                    else:
+                        print("Incorrect Value")
+
+
+
+            else:
+                print("Incorret Value")
+
+    else:
+
+        print("Incorrect Value")
