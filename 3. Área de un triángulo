@@ -1,14 +1,48 @@
 import time
+import os
+
+def clear():
+    os.system("cls")
+def wait():
+    time.sleep(1)
+def is_number(x):
+    return type(x) in (int, float)
+
+clear()
 print(" ··· El Área de un Triángulo ···")
-var1=int(input("Base [cm]: "))
-var2=int(input("Altura [cm]: "))
-time.sleep(1)
-print("El área del triángulo es: ")
-time.sleep(1)
-print(".")
-time.sleep(1)
-print("..")
-time.sleep(1)
-print("...")
-time.sleep(1)
-print((var1*var2)/2," centímetros")
+print("  *** Solo números enteros ***")
+input("PRESIONE CUALQUIER TECLA: ")
+clear()
+
+a = True
+b = True
+
+while a is True:
+    var1=int(input("Base [cm]: "))
+    
+    if is_number(var1):
+
+        a = False
+        clear()
+        var2=int(input("Altura [cm]: "))
+        while b is True:
+
+            if is_number(var2):
+                b = False
+                clear()
+                wait()
+                print("El área del triángulo es: ")
+                wait()
+                print(".")
+                wait()
+                print("..")
+                wait()
+                print("...")
+                wait()
+                print(int((var1*var2)/2)," centímetros")
+            
+            else:
+                print("Valor Incorrecto")
+
+    else:
+        print("Valor Incorrecto")
