@@ -46,7 +46,7 @@ while a=="1":
                         print("The last thing you see is a giant boulder, rolling down the stairs")
                         print("You are squashed and die inmediately")
                         print("THE END")
-                        print("Thank you for playing")
+                        print("Thank You For Playing")
 
                     elif C=="down":
                         c="2"
