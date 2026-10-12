@@ -13,7 +13,7 @@ print("\nDIFICULTADES:\n1. Fácil\n2. Normal\n3. Díficil\n")
 a = True
 while a is True:
 
-    tem = input("\nintroduzca La Temática (1/2/3): ")
+    tem = input("\nIntroduzca La Temática (1/2/3): ")
 
     if tem == "1": #Animales
         dif = input("Introduzca La Dificultad (1/2/3): ")
