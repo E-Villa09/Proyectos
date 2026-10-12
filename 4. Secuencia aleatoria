@@ -4,13 +4,13 @@ A=["perro", "gato", "conejo", "toro", "ciervo"]
 B=["rojo", "verde", "naranja", "amarillo", "morado"]
 C=["salta", "corre", "duerme", "come", "camina"]
 D=["prado", "valle", "campo", "monte", "cerro"]
-E="a"
-while E=="a":
+E = True
+while E is True:
     a=random.choice(list(A))
     b=random.choice(list(B))
     c=random.choice(list(C))
     d=random.choice(list(D))
-    var=input("¿Crear frase inédita? (s/n):")
+    var=input("¿Crear frase inédita? (s/n): ")
     if var == "s":
         print("(CREANDO) .")
         time.sleep(1)
@@ -18,8 +18,9 @@ while E=="a":
         time.sleep(1)
         print("(CREANDO) ...")
         time.sleep(1)
-        print("el",a,b,c,"en el",d)
+        print("\n[el",a,b,c,"en el",d,"]\n")
     elif var == "n":
         print(":/")
+        E = False
     else:
         print("Valor Incorrecto")
