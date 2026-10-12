@@ -1,4 +1,4 @@
-#este código hay que mejorarlo mucho
+#este código hay que mejorarlo mucho!!!
 import random
 
 #Introduccion.
