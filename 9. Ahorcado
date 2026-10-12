@@ -1,0 +1,125 @@
+import random
+import os
+
+def clear():
+    os.system("cls")
+
+clear()
+print(" ***************\n    AHORCADO\n ***************\n")
+print("TEMÁTICAS:\n1. Animales\n2. Comida\n3. paises")
+print("\nDIFICULTADES:\n1. Fácil\n2. Normal\n3. Díficil\n")
+
+# Elegir temática y dificultad
+a = True
+while a is True:
+
+    tem = input("\nintroduzca La Temática (1/2/3): ")
+
+    if tem == "1": #Animales
+        dif = input("Introduzca La Dificultad (1/2/3): ")
+        if dif == "1": #Dificultad Fácil
+                lis = ("gato","perro","mono","pez","rata")
+                op = 6
+                a  = False
+        elif dif == "2": #Dificultad Normal
+                lis = ("hamster","camello","girafa","tiburon","delfin")
+                op = 6
+                a  = False
+        elif dif == "3": #Dificultad Difícil
+                lis = ("oranngutan","paquidermo","saltamontes","garrapata","rinoceronte")
+                op = 6
+                a  = False
+        else:
+            print("Valor Incorrecto")
+
+    if tem == "2": #Comida
+        dif = input("Introduzca La Dificultad (1/2/3): ")
+        if dif == "1": #Dificultad Fácil
+            lis = ("pan","arrroz","huevo","pasta")
+            op = 6
+            a  = False
+        elif dif == "2": #Dificultad Normal
+            lis = ("bocadillo","paella","espagueti","macarrones","ensalada")
+            op = 6
+            a  = False
+        elif dif == "3": #Dificultad Difícil
+            lis = ("entrecot","ratatouille","schnitzel","gazpacho","tortellini")
+            op = 6
+            a  = False
+
+    if tem == "3": #Paises
+            dif = input("Introduzca La Dificultad (1/2/3): ")
+            if dif == "1": #Dificultad Fácil
+                lis = ("italia","francia","mexico","japon","china")
+                op = 6
+                a  = False
+            elif dif == "2": #Dificultad Normal
+                lis = ("portugal","alemania","irlanda","uruguay","argentina")
+                op = 6
+                a  = False
+            elif dif == "3": #Dificultad Difícil
+                lis = ("mozambique","kazajistan","afganistan","groenlandia","mauritania","bielorrusia")
+                op = 6
+                a  = False
+    else:
+         print("Valor Incorrecto")
+
+
+pal_al = random.choice(lis).lower()
+pal = ["_ "] * len(pal_al)
+adivi = set()
+
+def palop():
+    print("\n"," ".join(pal),f"\n\nTiene {op} oportunidades ")
+
+clear()
+palop()
+
+while op > 0 and "_ " in pal:
+
+    let = input("\nIntroduzca una letra o palabra: ")
+
+    if not let.isalpha():
+        print("Introduzca Un Valor Válido")
+    
+    else:
+
+        if len(let) > 1: #Valor introducido es una palabra
+
+            if let == pal_al: #Palabra correcta
+                clear()
+                pal = let
+
+            else: #Palabra incorrecta
+                clear()
+                op-=1
+                print(f"[La Palabra No Era {let}]")
+                palop()   
+        else: #Valor introducido es una letra
+
+            if let in adivi: #Ya ha dicho la letra
+                print("Ya Ha Dicho Esa Letra")
+
+            else:
+                if let in pal_al: #Letra correcta
+                            
+                    clear()
+                    adivi.add(let)
+                    print(f"[La Letra {let} Es Correcta]")
+                    for index, letter in enumerate(pal_al):
+                        if letter == let:
+                            pal[index] = let
+                    palop()
+
+                
+                else: #Letra incorrecta
+                    adivi.add(let)
+                    clear()
+                    print(f"[La Letra {let} No Es Correcta]")
+                    op-=1
+                    palop()
+
+if op>0: #Fin Bueno
+    print(f"La Palabra Era: {pal_al}\n\nFelicidades\n")
+else: #Fin Malo
+    print("\nSe Le Acabaron Las Oportunidades",f"\n - La Palabra era: {pal_al}")
