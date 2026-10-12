@@ -120,6 +120,7 @@ while a=="1":
                         print("'Look what I found. Thing bumped into me in the stairs'")
                         print("'Come have stew with us, I just have to add the final spices', the gnome says")
                         print("The gnome adds some strange red spices. 'It's done', he declares")
+                        print("You hear a bell ringing in the distance")
                         print("All three of you sit down and have a nice hearty supper")
                         print("Suddenly, your view starts getting blurry, your head feels heavy, you pass out")
                         x=input("PRESS ANY KEY: ")
