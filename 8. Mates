@@ -1,0 +1,23 @@
+import time
+import math
+x=input()
+if x=="s":
+    a=int(input("a: "))
+    b=int(input("b: "))
+    c=int(input("c: "))
+    time.sleep(1)
+    print("...")
+    time.sleep(1)
+    print("Las raíces de la ecuación son: ")
+    print(f"x = {(-b + math.sqrt(b*b-4*a*c))/2} y {(-b - math.sqrt(b*b-4*a*c))/2}")
+else:
+    func= (input("función (x^n): "))
+    list = []
+    list.append(func)
+    for num in func:
+        if num.isnumeric():
+            num=int(num)
+    if num-1 == 1:
+        print(f"Derivada: {num}x")
+    else:
+        print(f"Derivada: {num}x^{num-1}")
